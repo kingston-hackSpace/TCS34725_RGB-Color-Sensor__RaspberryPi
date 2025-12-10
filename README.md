@@ -24,27 +24,17 @@ The LED pin can be pulled low to turn off the LED. This can be done by:
 ### WIRING
 Raspberry Pi GPIO [diagram here](https://github.com/kingston-hackSpace/RaspberryPi/blob/main/GPIO-diagram.png)
 
-Arduino UNO|RGB Sensor
+RGB Sensor | RPi GPIO
 -|-
 GND | GND
-5V | VIN
-A4 | SDA
-A5 | SCL (I2C Clock signal)
+VIN | 3.3V
+SDA | SDA / GPIO2 / Pin3
+SCL| SCL / GPIO3 / Pin5
 
 ----
-## TUTORIAL 1: Visualizing RGB-sensor data in the Arduino Serial Monitor
+## TUTORIAL 1: 
 ----
    
-- Download the corresponding libraries [Adafruit_TCS34725](https://github.com/CamilaColussi-KSA/Adafruit_TCS34725)
-
-- Install the libraries via "Importing a .zip Library". Instructions [here](https://docs.arduino.cc/software/ide-v1/tutorials/installing-libraries/)
-
-- Open Arduino IDE and find the sensor examples:
-   - File > Examples > Adafruit TCS34725 > tcs34725
-
-- Upload the code to your Arduino board.
-
-- Open Arduino's Serial Monitor to see the incoming data.
 
 
 ----
