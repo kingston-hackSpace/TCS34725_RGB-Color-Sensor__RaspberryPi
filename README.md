@@ -42,9 +42,13 @@ Learn more about Python [here](https://www.python.org/)
 ----
 ### PROGRAMMING INSTRUCTIONS
 
+- Make sure your RPi is connected to internet (WIFI or Ethernet)
+
+- Plug your Raspberry Pi and wait until you see the main Desktop
+  
 - Open the Raspberry Pi's Terminal (black top left icon).
 
-- Your terminal should pop-up, looking similar to [this](https://github.com/kingston-hackSpace/TCS34725_RGB-Color-Sensor__RasberryPi/blob/main/Terminal-view_.jpg)
+- The RPi terminal should pop-up, looking similar to [this](https://github.com/kingston-hackSpace/TCS34725_RGB-Color-Sensor__RasberryPi/blob/main/Terminal-view_.jpg)
 
 - From now on, we will be typing instructions on the terminal only.
 
@@ -84,13 +88,37 @@ Learn more about Python [here](https://www.python.org/)
   pip3 install adafruit-circuitpython-tcs34725
   ```
 
-- Create a blank python script for your project titled "RGB_project.py". 
+- Download python script from github
 
   ```
-  nano RGB_project.py
+  wget https://github.com/kingston-hackSpace/TCS34725_RGB-Color-Sensor__RasberryPi/archive/refs/heads/main.zip
+  ```
+  
+- You should have a "main.zip" file located in your project directory. To confirm that everything went well, type the following:
+
+  ```
+  ls
   ```
 
-- You now see that your terminal changed the way it looks. You are no longer typing directly on your terminal but inside your recently created script. We will type our code here. 
+- You should now see the zip file displayed in your terminal as part of your project directory.
+
+- Unzip and go to main folder:
+
+  ```
+  unzip main.zip
+  cd TCS34725_RGB-Color-Sensor__RasberryPi-main
+  ls
+  ```
+
+- From the last step ("ls" command), you should now see a file called "RGB_project.py".
+
+- Run the python file:
+
+  ```
+  python3 RGB_project.py
+  ```
+
+- You should now see the reading from your sensor being printing on the terminal. 
 
 
 ----
