@@ -7,11 +7,7 @@ The [TCS34725 RGB sensor](https://learn.adafruit.com/adafruit-color-sensors/over
 
 Used to provide constant illumination. 
 
-The LED pin can be pulled low to turn off the LED. This can be done by:
-
-  1. Wiring directly to ground to turn it off completely.
-     
-  2. Wiring to a spare digital pin and control it with digitalWrite().
+On the Raspberry Pi, the LED pin can be wired to a GPIO pin and controlled manually. If left unconnected, the LED remains on by default due to internal pull-up.
 
 ----
 # TUTORIAL SET-UP for Raspberry Pi
@@ -42,7 +38,7 @@ Learn more about Python [here](https://www.python.org/)
 ----
 ### PROGRAMMING INSTRUCTIONS
 
-- Make sure your RPi is connected to internet (WIFI or Ethernet)
+- Make sure your RPi is connected to the internet (WIFI or Ethernet)
 
 - Plug your Raspberry Pi and wait until you see the main Desktop
   
@@ -54,6 +50,18 @@ Learn more about Python [here](https://www.python.org/)
 
 
 # Using the terminal
+
+- Enable i2C:
+  ```
+  sudo raspi-config
+  ```
+
+- Navigate to *Interface Options* > *Enable I2C*
+
+- Reboot the RPi
+  ```
+  sudo reboot
+  ```
 
 - Updating device and installing all necessary protocols:
 
@@ -85,7 +93,7 @@ Learn more about Python [here](https://www.python.org/)
 - Install the tcs34725 sensor library:
 
   ```
-  pip3 install adafruit-circuitpython-tcs34725
+  pip install adafruit-circuitpython-tcs34725
   ```
 
 - Download python script from github
@@ -118,9 +126,9 @@ Learn more about Python [here](https://www.python.org/)
   python3 RGB_project.py
   ```
 
-- You should now see the reading from your sensor being printing on the terminal.
+- You should now see the reading from your sensor being printed on the terminal.
 
-- To exit the readings and go back to your terminal:
+- To exit the readings and go back to the terminal:
 
   ```
   CTRL + C
@@ -139,7 +147,7 @@ Learn more about Python [here](https://www.python.org/)
   CTRL + X
   ```
   
-- To run the script again:
+- To run the script again, type:
 
   ```
   python3 RGB_project.py
