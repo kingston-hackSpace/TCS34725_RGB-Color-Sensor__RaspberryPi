@@ -118,7 +118,34 @@ Learn more about Python [here](https://www.python.org/)
   python3 RGB_project.py
   ```
 
-- You should now see the reading from your sensor being printing on the terminal. 
+- You should now see the reading from your sensor being printing on the terminal.
+
+- To exit the readings and go back to your terminal:
+
+  ```
+  CTRL + C
+  ```
+
+- To modify the script:
+
+  ```
+  nano RGB_project.py
+  ```
+  
+- To save and exit the script:
+
+  ```
+  CTRL + O
+  CTRL + X
+  ```
+  
+- To run the script again:
+
+  ```
+  python3 RGB_project.py
+  ```
+  
+ 
 
 
 ----
