@@ -1,6 +1,6 @@
 # TCS34725_RGB-Color-Sensor__RaspberryPi
 
-The [TCS34725 RGB sensor](https://learn.adafruit.com/adafruit-color-sensors/overview) provides a digital return of red, green, blue (RGB), and clear light sensing values. An RGB Color sensor helps you accurately detect an object’s colour in your interactive projects.
+The [TCS34725 RGB sensor](https://learn.adafruit.com/adafruit-color-sensors/overview) provides a digital return of red, green, blue (RGB), and clear light (C) sensing values. An RGB Color sensor helps you accurately detect an object’s colour in your interactive projects.
 
 ----
 **TCS34725 on-board white LED**
@@ -23,7 +23,7 @@ Raspberry Pi GPIO [diagram here](https://github.com/kingston-hackSpace/Raspberry
 RGB Sensor | RPi GPIO
 -|-
 GND | GND
-VIN | 3.3V
+VIN | 3.3V or 5V
 SDA | SDA / GPIO2 / Pin3
 SCL| SCL / GPIO3 / Pin5
 
@@ -31,130 +31,103 @@ SCL| SCL / GPIO3 / Pin5
 ### Python
 ----
 
-Our programming language for this tutorial will be *Python*, which is the standard programming language included with a Raspberry Pi.
+This tutorial uses *Python*, which is the standard programming language included with a Raspberry Pi.
 
-Learn more about Python [here](https://www.python.org/)
+Learn more about Python [here](https://www.python.org/).
 
 ----
 ### PROGRAMMING INSTRUCTIONS
 
-- Make sure your RPi is connected to the internet (WIFI or Ethernet)
+- Ensure the RPi is connected to the internet (via WIFI or Ethernet).
 
-- Plug your Raspberry Pi and wait until you see the main Desktop
+- Power on the Raspberry Pi and wait until you see the main Desktop.
   
-- Open the Raspberry Pi's Terminal (black top left icon).
+- Open the Raspberry Pi's Terminal (black icon at the top-left in your Desktop).
 
-- The RPi terminal should pop-up, looking similar to [this](https://github.com/kingston-hackSpace/TCS34725_RGB-Color-Sensor__RaspberryPi/blob/main/Terminal-view_.jpg)
+- The RPi Terminal should pop-up, looking similar to [this](https://github.com/kingston-hackSpace/TCS34725_RGB-Color-Sensor__RaspberryPi/blob/main/Terminal-view_.jpg)
 
-- From now on, we will be typing instructions on the terminal only.
+- From now on, we will be typing instructions using the Terminal.
 
 
 # Using the terminal
 
 - Enable i2C:
-  ```
-  sudo raspi-config
-  ```
+
+      sudo raspi-config
 
 - Navigate to *Interface Options* > *Enable I2C*
 
 - Reboot the RPi
-  ```
-  sudo reboot
-  ```
+  
+      sudo reboot
 
-- Updating device and installing all necessary protocols:
+- Update and install all necessary protocols:
 
-  ```
-  sudo apt update && sudo apt upgrade -y
-  sudo apt install -y python3-pip i2c-tools
-  ```
+      sudo apt update && sudo apt upgrade -y
+      sudo apt install -y python3-pip i2c-tools
 
 - Create a directory for your project (located at Desktop):
 
-  ```
-  cd Desktop
-  mkdir RGB_project
-  cd RGB_project
-  ```
+      cd Desktop
+      mkdir RGB_project
+      cd RGB_project
 
 - Create a Virtual Environment (venv) located at your new RGB_project directory:
 
-  ```
-  python3 -m venv venv
-  ```
+      python3 -m venv venv
 
 - **Activate your *Virtual Environment***
 
-  ```
-  source venv/bin/activate
-  ```
+      source venv/bin/activate
 
 - Install the tcs34725 sensor library:
 
-  ```
-  pip install adafruit-circuitpython-tcs34725
-  ```
+      pip install adafruit-circuitpython-tcs34725
 
-- Download python script from github
+- Download the following python script:
 
-  ```
-  wget https://github.com/kingston-hackSpace/TCS34725_RGB-Color-Sensor__RaspberryPi/archive/refs/heads/main.zip
-  ```
+      wget https://github.com/kingston-hackSpace/TCS34725_RGB-Color-Sensor__RaspberryPi/archive/refs/heads/main.zip
   
 - You should have a "main.zip" file located in your project directory. To confirm that everything went well, type the following:
-
-  ```
-  ls
-  ```
-
+  
+      ls
+  
 - You should now see the zip file displayed in your terminal as part of your project directory.
 
 - Unzip and go to main folder:
 
-  ```
-  unzip main.zip
-  cd TCS34725_RGB-Color-Sensor__RaspberryPi-main
-  ls
-  ```
+    unzip main.zip
+    cd TCS34725_RGB-Color-Sensor__RaspberryPi-main
+    ls
 
 - From the last step ("ls" command), you should now see a file called "RGB_project.py".
 
 - Run the python file:
 
-  ```
-  python3 RGB_project.py
-  ```
+    python3 RGB_project.py
 
 - You should now see the reading from your sensor being printed on the terminal.
 
 - To exit the readings and go back to the terminal:
 
-  ```
-  CTRL + C
-  ```
-
+    CTRL + C
+  
 - To modify the script:
 
-  ```
-  nano RGB_project.py
-  ```
-  
+    nano RGB_project.py
+
 - To save and exit the script:
 
-  ```
-  CTRL + O
-  CTRL + X
-  ```
-  
+    Save : CTRL + O -> Enter
+    Exit : CTRL + X
+
 - To run the script again, type:
 
-  ```
   python3 RGB_project.py
-  ```
-  
- 
 
+**IMPORTANT NOTE: **
+
+The dependencies for this script were installed in the virtual environment that you previously created. You will always need to be inside the virtual environment to successfully run this script. 
 
 ----
 ### MORE TUTORIALS
