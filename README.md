@@ -85,7 +85,6 @@ Learn more about Python [here](https://www.python.org/).
 
 - Create a directory for your project (located at Desktop):
 
-      cd Desktop
       mkdir RGB_project
       cd RGB_project
 
