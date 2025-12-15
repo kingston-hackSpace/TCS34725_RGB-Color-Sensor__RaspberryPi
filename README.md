@@ -49,7 +49,7 @@ Learn more about Python [here](https://www.python.org/).
 - From now on, we will be typing instructions using the Terminal.
 
 
-# Using the terminal
+# Configure Dependancies
 
 - Enable i2C:
 
@@ -66,19 +66,28 @@ Learn more about Python [here](https://www.python.org/).
       sudo apt update && sudo apt upgrade -y
       sudo apt install -y python3-pip i2c-tools
 
-- Create a directory for your project (located at Desktop):
+----
+# Virtual Environments
+
+- Create a Virtual Environment (venv) located at your Desktop:
 
       cd Desktop
-      mkdir RGB_project
-      cd RGB_project
-
-- Create a Virtual Environment (venv) located at your new RGB_project directory:
-
       python3 -m venv venv
 
 - **Activate your *Virtual Environment***
 
       source venv/bin/activate
+
+- More about Virtual Environments [here](https://github.com/kingston-hackSpace/Virtual-Environments__RaspberryPi/blob/main/README.md)
+  
+----
+# Installting the TCS34725 library
+
+- Create a directory for your project (located at Desktop):
+
+      cd Desktop
+      mkdir RGB_project
+      cd RGB_project
 
 - Install the tcs34725 sensor library:
 
