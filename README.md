@@ -104,34 +104,34 @@ Learn more about Python [here](https://www.python.org/).
 
 - Unzip and go to main folder:
 
-    unzip main.zip
-    cd TCS34725_RGB-Color-Sensor__RaspberryPi-main
-    ls
+      unzip main.zip
+      cd TCS34725_RGB-Color-Sensor__RaspberryPi-main
+      ls
 
 - From the last step ("ls" command), you should now see a file called "RGB_project.py".
 
 - Run the python file:
 
-    python3 RGB_project.py
+      python3 RGB_project.py
 
 - You should now see the reading from your sensor being printed on the terminal.
 
 - To exit the readings and go back to the terminal:
 
-    CTRL + C
+      CTRL + C
   
 - To modify the script:
 
-    nano RGB_project.py
+      nano RGB_project.py
 
 - To save and exit the script:
 
-    Save : CTRL + O -> Enter
-    Exit : CTRL + X
+      Save : CTRL + O -> Enter
+      Exit : CTRL + X
 
 - To run the script again, type:
 
-  python3 RGB_project.py
+      python3 RGB_project.py
 
 **IMPORTANT NOTE: **
 
